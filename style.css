@@ -1,0 +1,244 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: #ffa500;
+}
+
+/* Home Section */
+#home {
+    background-image: url('cons2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+#home h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s;
+}
+#home p {
+    font-size: 1.5rem;
+    animation: fadeIn 3s;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Services Section */
+#services {
+    padding: 3rem;
+    background-color: #f4f4f4;
+}
+#services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.service {
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.service img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.service h3 {
+    margin: 1rem 0;
+}
+.service:hover {
+    transform: scale(1.05);
+}
+
+/* About Us, Help, and Contact Section */
+section {
+    padding: 3rem;
+}
+
+/* About Us Section with Marquee */
+.marquee-container {
+    width: 100%;
+    margin: 2rem 0;
+    border: 2px solid #ffa500;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.marquee {
+    width: 100%;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.marquee h3 {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#about, #help {
+    background-color: #fff;
+    text-align: center;
+}
+#about h2, #help h2 {
+    margin-bottom: 1rem;
+}
+#about p, #help p {
+    font-size: 1.2rem;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f4f4f4;
+    padding: 2rem;
+}
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.contact-form, .contact-map {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+.contact-form h3 {
+    margin-bottom: 1rem;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.contact-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    padding: 0.7rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.contact-form button:hover {
+    background-color: #ffa500;
+}
+
+/* Responsive Google Map */
+.contact-map {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Aspect ratio 16:9 */
+}
+.contact-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+footer .social-links a {
+    color: #ffa500;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+footer .social-links a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    #home h2 {
+        font-size: 2.5rem;
+    }
+    #home p {
+        font-size: 1.2rem;
+    }
+    .services-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .contact-form, .contact-map {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #home h2 {
+        font-size: 2rem;
+    }
+    #home p {
+        font-size: 1rem;
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+}
